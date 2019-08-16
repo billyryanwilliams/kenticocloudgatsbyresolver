@@ -1,3 +1,3 @@
-import RichText from './src/RichText';
+import RichText from './RichText';
 
 export default RichText;

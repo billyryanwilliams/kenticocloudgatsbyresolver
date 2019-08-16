@@ -40,6 +40,9 @@ class KenticoRichTextResolver {
   getAssetId(domNode) {
     return get(domNode, 'attribs["data-asset-id"]') || null;
   }
+  getAsset() {
+    return {"url": ""};
+  }
   /** Get code name for Kentico Cloud inline content item from DOM node. */
   getCodeName(domNode) {
     return get(domNode, 'attribs["data-codename"]') || null;

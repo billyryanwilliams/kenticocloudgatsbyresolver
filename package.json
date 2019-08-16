@@ -1,0 +1,37 @@
+{
+  "name": "kenticocloudgatsbyresolver",
+  "version": "1.0.0",
+  "description": "A simple component to allow you to simplify resolving rich text elements within your gatsby app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/babel src --out-file index.js"
+  },
+  "author": "Billy Williams",
+  "license": "MIT",
+  "dependencies": {
+    "html-react-parser": "^0.9.1",
+    "lodash": "^4.17.15",
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.13.13",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.8.0",
+    "babel-preset-gatsby": "^0.2.8",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "react-test-renderer": "^16.8.6",
+    "gatsby": "^2.13.13",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}

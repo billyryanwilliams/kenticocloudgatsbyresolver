@@ -1,12 +1,17 @@
 {
   "name": "kenticocloudgatsbyresolver",
-  "version": "1.0.3",
+  "version": "1.0.33",
   "description": "A simple component to allow you to simplify resolving rich text elements within your gatsby app",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./node_modules/.bin/babel src --out-dir dist"
   },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/billyryanwilliams/kenticocloudgatsbyresolver"
+  },
+  "homepage": "https://github.com/billyryanwilliams/kenticocloudgatsbyresolver",
   "author": "Billy Williams",
   "license": "MIT",
   "dependencies": {

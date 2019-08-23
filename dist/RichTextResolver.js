@@ -74,10 +74,10 @@ function () {
     }
   }, {
     key: "getAsset",
-    value: function getAsset() {
-      return {
-        "url": ""
-      };
+    value: function getAsset(id, assets) {
+      return assets.find(function (asset) {
+        return asset.imageId === id;
+      });
     }
     /** Get code name for Kentico Cloud inline content item from DOM node. */
 
@@ -138,7 +138,8 @@ function () {
         var image = this.getAsset(id, images);
         return this.customImageRenderer({
           id: id,
-          url: image.url
+          url: image.url,
+          description: image.description
         });
       } // Replace inline links.
 

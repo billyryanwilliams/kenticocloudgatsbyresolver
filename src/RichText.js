@@ -24,7 +24,7 @@ const RichText = ({ content, images, links, contentItems, customLinkedItemRender
     }
   }
   if(customImageRenderer === undefined) {
-    customImageRenderer = ({id, url}) => {
+    customImageRenderer = ({id, url, description}) => {
       return <picture class="k-inline-image">
         <source 
           srcset={`${url}?w=600&auto=format 1x, ${url}?w=1200&auto=format 2x`}
@@ -38,7 +38,7 @@ const RichText = ({ content, images, links, contentItems, customLinkedItemRender
           srcset={`${url}?w=300&auto=format 1x, ${url}?w=600&auto=format 2x`}
           media="(min-width: 300px)"
         />
-        <img alt={id} src={url} />
+        <img alt={description} src={url} />
       </picture>
     }
   }

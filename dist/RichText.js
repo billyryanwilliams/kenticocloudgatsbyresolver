@@ -57,7 +57,8 @@ var RichText = function RichText(_ref) {
   if (customImageRenderer === undefined) {
     customImageRenderer = function customImageRenderer(_ref3) {
       var id = _ref3.id,
-          url = _ref3.url;
+          url = _ref3.url,
+          description = _ref3.description;
       return _react["default"].createElement("picture", {
         "class": "k-inline-image"
       }, _react["default"].createElement("source", {
@@ -70,7 +71,7 @@ var RichText = function RichText(_ref) {
         srcset: "".concat(url, "?w=300&auto=format 1x, ").concat(url, "?w=600&auto=format 2x"),
         media: "(min-width: 300px)"
       }), _react["default"].createElement("img", {
-        alt: id,
+        alt: description,
         src: url
       }));
     };

@@ -1,6 +1,6 @@
 {
   "name": "kenticocloudgatsbyresolver",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "description": "A simple component to allow you to simplify resolving rich text elements within your gatsby app",
   "main": "dist/index.js",
   "scripts": {

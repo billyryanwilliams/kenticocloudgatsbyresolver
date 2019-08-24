@@ -24,24 +24,25 @@ const RichText = ({ content, images, links, contentItems, customLinkedItemRender
     }
   }
   if(customImageRenderer === undefined) {
-    customImageRenderer = ({id, url}) => {
-      return <picture class="k-inline-image">
+    customImageRenderer = ({id, url, description}) => {
+      return <picture className="k-inline-image">
         <source 
-          srcset={`${url}?w=600&auto=format 1x, ${url}?w=1200&auto=format 2x`}
+          srcSet={`${url}?w=600&auto=format 1x, ${url}?w=1200&auto=format 2x`}
           media="(min-width: 600px)"
         />
         <source 
-          srcset={`${url}?w=400&auto=format 1x, ${url}?w=800&auto=format 2x`}
+          srcSet={`${url}?w=400&auto=format 1x, ${url}?w=800&auto=format 2x`}
           media="(min-width: 400px)"
         />
         <source 
-          srcset={`${url}?w=300&auto=format 1x, ${url}?w=600&auto=format 2x`}
+          srcSet={`${url}?w=300&auto=format 1x, ${url}?w=600&auto=format 2x`}
           media="(min-width: 300px)"
         />
-        <img alt={id} src={url} />
+        <img alt={description} src={url} />
       </picture>
     }
   }
+
   const kenticoRichTextResolver = new KenticoRichTextResolver({ 
       rawHtml: content,
       linkedImages: images, 

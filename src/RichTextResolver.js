@@ -41,7 +41,11 @@ class KenticoRichTextResolver {
     return get(domNode, 'attribs["data-asset-id"]') || null;
   }
   getAsset(id, assets) {
-    return assets.find(asset => asset.imageId === id);
+    if(assets !== undefined) {
+      return assets.find(asset => asset.imageId === id);
+    } else {
+      return undefined;
+    }
   }
   /** Get code name for Kentico Cloud inline content item from DOM node. */
   getCodeName(domNode) {
@@ -73,7 +77,9 @@ class KenticoRichTextResolver {
     if (this.isAsset(domNode)) {
       const id = this.getAssetId(domNode);
       const image = this.getAsset(id, images);
-      return this.customImageRenderer({ id: id, url: image.url, description: image.description});
+      if(image !== undefined) {
+        return this.customImageRenderer({ id: id, url: image.url, description: image.description});
+      }
     }
     // Replace inline links.
     if (this.isLink(domNode)) {
